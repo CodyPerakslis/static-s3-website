@@ -1,29 +1,33 @@
 #!/bin/bash
+set -e
 
-# Load variables
 . ./deployment/load_variables.sh
 
+echo "Opening ${HeadBucket} ..."
 
-# Upload cloudformation template to s3
-aws s3 cp deployment/$deployfile s3://$bucket/$keypostfix
-
-# Run cloudformation
-function already-exists {
-  aws cloudformation update-stack \
-    --template-url $root/$bucket/$keypostfix \
-    --stack-name $stackname \
-    --parameters "[{\"ParameterKey\":\"HeadBucket\",\"ParameterValue\":\"${headbucket}\"},{\"ParameterKey\":\"RedirectBucket\",\"ParameterValue\":\"${redirectbucket}\"}]"
+function s3-create {
+  echo "Creating ${HeadBucket} bucket ..."
+  aws s3api wait bucket-not-exists --bucket $HeadBucket
+  aws s3api create-bucket --bucket $HeadBucket --region us-east-1 1> /dev/null
 }
 
-function create-stack {
-  aws cloudformation create-stack \
-    --template-url $root/$bucket/$keypostfix \
-    --stack-name $stackname \
-    --parameters "[{\"ParameterKey\":\"HeadBucket\",\"ParameterValue\":\"${headbucket}\"},{\"ParameterKey\":\"RedirectBucket\",\"ParameterValue\":\"${redirectbucket}\"}]"
-}
+trap s3-create EXIT
+aws s3api head-bucket --bucket $HeadBucket 2> /dev/null
+trap - EXIT
 
-#set -e
-#trap already-exists EXIT
-create-stack
+echo "Enable hosting ..."
+aws s3 website s3://$HeadBucket/ \
+  --index-document index.html \
+  --error-document error.html
 
-#trap - EXIT
+echo "Making public ..."
+cp ./deployment/publicpolicy.json /tmp/publicpolicy.json
+sed -i "s/MYBUCKET/${HeadBucket}/g" /tmp/publicpolicy.json
+
+aws s3api put-bucket-policy \
+  --bucket $HeadBucket \
+  --policy file:///tmp/publicpolicy.json
+
+rm /tmp/publicpolicy.json
+
+echo "Done."
