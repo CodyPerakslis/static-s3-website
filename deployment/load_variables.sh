@@ -1,3 +1,9 @@
 #!/bin/bash
 
-HeadBucket="www.kanetus.com"
+# Kanetus
+#HeadBucket="www.kanetus.com"
+#WebTarget="kanetus"
+
+# Personal
+HeadBucket="www.codyperakslis.com"
+WebTarget="codyperakslis"
