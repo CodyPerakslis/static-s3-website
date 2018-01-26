@@ -11,6 +11,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript"> function sendMail() {
+    var link = "mailto:hoakiet98@gmail.com"
+             + "?cc=myCCaddress@example.com"
+             + "&subject=" + escape(document.getElementById('name').value)
+             + "&email=" + escape(document.getElementById('email').value)
+             + "&body=" + escape(document.getElementById('message').value)
+    ;
+
+    window.location.href = link;
+}></script>
 	</head>
 	<body>
 
@@ -24,8 +34,7 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li><a href="progress.html">Progress</a></li>
 				</ul>
 			</nav>
 
@@ -47,21 +56,20 @@
 		<!-- One -->
 			<section id="one" class="wrapper style2">
 				<div class="inner">
-					<div>
-						<div class="box">
-							<div class="image fit">
-								<img src="images/pic04.jpg" alt="" />
-							</div>
-							<div class="content">
-								<header class="align-center">
-									<h2>So what really is Kanetus?</h2>
-								</header>
-								<hr/>
-								<p style="padding-top: 50px; padding-bottom: 30px">	"It's like audio tour but not really". </p>
-								<header class="align-center">
-									<a href="#two" class="button special scrolly">GOT IT! LET'S START!</a>
-								</header>
-							</div>
+					<div class="box">
+						<div class="image fit">
+							<img src="images/pic04.jpg" alt="" />
+						</div>
+						<div class="content">
+							<header class="align-center">
+								<h2>So what really is Kanetus?</h2>
+							</header>
+							<hr/>
+							<p style="padding-top: 50px; padding-bottom: 30px; color: #666666">	"It's like audio tour but not really". 
+							</p>
+							<header class="align-center">
+								<a href="#two" class="button special scrolly" style="background-color: #EE4266; color: #ffffff ">GOT IT!</a>
+							</header>
 						</div>
 					</div>
 				</div>
@@ -69,33 +77,41 @@
 
 		<!-- Two -->
 			<section id="two" class="wrapper style3">
+				<style type="text/css">
+					p{
+						color:#cccccc;
+					}
+				</style>
 				<div class="inner">
 					<div id="flexgrid">
 						<div>
 							<header>
 								<h3>Get it on your phone</h3>
 							</header>
-							<p>You can download Kanetus to try it now. jk we're still making it for Android but here's a demo</p>
+							<p>You can download Kanetus to try it now. jk we're still making it for Android but here's a 
+								<a class="alink" href ="progress.html" style="color: #EE4266;">demo</a> </p>
+							<br>
 							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
+								<li><a href="#three" class="button alt">Learn More</a></li>
 							</ul>
 						</div>
 						<div>
 							<header>
 								<h3>Listen to it</h3>
 							</header>
-							<p>Once you've turn on the app, it'll start playing. We have no idea what it'll play but we hope that it's good</p>
+							<p>Once you've turn on the app, it'll start playing. We have no idea what it'll play but we hope that it's good</p> 
+							<br>
 							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
+								<li><a href="#three" class="button alt">Learn More</a></li>
 							</ul>
 						</div>
 						<div>
 							<header>
 								<h3>Make your own</h3>
 							</header>
-							<p>You can make your own thing to play when other people use it on their phone too if your heart doth desire. Just be nice!</p>
+							<p>You can make your own thing to play when other people use it on their phone too if your heart doth desire. <br>Just be nice!</p>
 							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
+								<li><a href="#three" class="button alt">Learn More</a></li>
 							</ul>
 						</div>
 					</div>
@@ -114,11 +130,11 @@
 								</div>
 								<div class="content">
 									<header class="align-center">
-										<h2>Lorem ipsum dolor</h2>
-										<p>maecenas feugiat ex purus, quis volutpat lacus placerat</p>
+										<h2>Listen</h2>
+										<p>To people-generated content</p>
 									</header>
 									<hr />
-									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
+									<p style="color: #666666; height: 170px;"> Explore the city a new way through content tailored for seemingly no pattern. It's an experience sharing platform. You will be hearing from someone speaking from the exact location you're standing on.</p>
 								</div>
 							</div>
 						</div>
@@ -130,11 +146,11 @@
 								</div>
 								<div class="content">
 									<header class="align-center">
-										<h2>Vestibulum sit amet</h2>
-										<p>mattis sapien pretium tellus venenatis</p>
+										<h2>Speak</h2>
+										<p>Populate the area with your own content</p>
 									</header>
 									<hr />
-									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
+									<p style="color: #666666;height: 170px;"> We're trying to make it as easy as possible to share your own experience. If you have obscure knowledge about your location, hit record and your voice will now be linked to your exact location. Anyone who walks by this spot now will here your voice. For all eternity. Or at least until we run out of server money.</p>
 								</div>
 							</div>
 						</div>
@@ -148,8 +164,8 @@
 				<div class="inner">
 
 					<header class="align-center">
-						<h2>Morbi interdum mollis sapien</h2>
-						<p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
+						<h2>Yes, this is risky business</h2>
+						<p>Eventually we hope to build in a voting system so it doesn't get too spammy. And the best files will (ideally) be voted to the top and bad actors get removed. <br>We will also be building free audio tours ourselves to this platform and currate all the tours we can to populate this thingy!</p>
 					</header>
 
 				</div>
@@ -161,7 +177,7 @@
 					<section>
 						<div class="box">
 							<div class="content">
-								<h2 class="align-center">Get in Touch</h2>
+								<h2 class="align-center">Reach out to us!</h2>
 								<hr />
 								<form action="#" method="post">
 									<div class="field half first">
@@ -173,23 +189,11 @@
 										<input name="email" id="email" type="email" placeholder="Email">
 									</div>
 									<div class="field">
-										<label for="dept">Department</label>
-										<div class="select-wrapper">
-											<select name="dept" id="dept">
-												<option value="">- Category -</option>
-												<option value="1">Manufacturing</option>
-												<option value="1">Shipping</option>
-												<option value="1">Administration</option>
-												<option value="1">Human Resources</option>
-											</select>
-										</div>
-									</div>
-									<div class="field">
 										<label for="message">Message</label>
 										<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
 									</div>
 									<ul class="actions align-center">
-										<li><input value="Send Message" class="button special" type="submit"></li>
+										<li><input value="Send Message" class="button special" type="submit" onclick="sendMail(); return false"></li>
 									</ul>
 								</form>
 							</div>
