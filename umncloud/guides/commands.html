@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud</title>
+</head>
+<body>
+  <h1>AWS Commands</h1>
+  <p>aws s3api create-bucket --bucket $Bucket_Name --region us-east-1</p>
+  <p>aws s3 website s3://$Bucker_Name/ \<br />
+      --index-document index.html \ <br />
+      --error-document error.html </p>
+  <p>aws s3api put-bucket-policy \ <br />
+      --bucket $Bucket_Name \ <br />
+      --policy file:///tmp/publicpolicy.json</p>
+  <p>[contents of /tmp/publicpolicy.json]:<br /><br />
+    {"Version": "2012-10-17",<br />
+    "Statement": [<br />
+        {
+            "Sid": "PublicReadGetObject",<br />
+            "Effect": "Allow",<br />
+            "Principal": "*",<br />
+            "Action": [
+                "s3:GetObject"
+            ],<br />
+            "Resource": [
+                "arn:aws:s3:::$Bucket_Name/*"
+            ]
+        }
+    ]
+  }</p>
