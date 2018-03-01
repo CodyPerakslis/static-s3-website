@@ -1,4 +1,7 @@
 #!/bin/bash
+# Use ./test.sh -s umncloud to start
+# Use ./test.sh -r umncloud to remove
+
 
 if [[ "$1" == "-s" ]]; then
   if [ ! -z "$2" ]; then
