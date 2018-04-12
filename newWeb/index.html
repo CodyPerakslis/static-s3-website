@@ -11,6 +11,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript"> function sendMail() {
+    var link = "mailto:hoakiet98@gmail.com"
+             + "?cc=myCCaddress@example.com"
+             + "&subject=" + escape(document.getElementById('name').value)
+             + "&email=" + escape(document.getElementById('email').value)
+             + "&body=" + escape(document.getElementById('message').value)
+    ;
+
+    window.location.href = link;
+}></script>
 	</head>
 	<body>
 
@@ -169,22 +179,21 @@
 							<div class="content">
 								<h2 class="align-center">Reach out to us!</h2>
 								<hr />
-								<form action="https://formspree.io/kanetusapp@gmail.com"  
-								method="POST">
+								<form action="#" method="post">
 									<div class="field half first">
 										<label for="name">Name</label>
-										<input type="text" name="name">
+										<input name="name" id="name" type="text" placeholder="Name">
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										<input type="email" name="_replyto">
+										<input name="email" id="email" type="email" placeholder="Email">
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" placeholder="Your message"></textarea>
+										<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
 									</div>
 									<ul class="actions align-center">
-										<li><input value="Send" class="button special" type="submit"></li>
+										<li><input value="Send Message" class="button special" type="submit" onclick="sendMail(); return false"></li>
 									</ul>
 								</form>
 							</div>
