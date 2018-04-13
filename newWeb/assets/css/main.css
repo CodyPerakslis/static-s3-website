@@ -1659,10 +1659,10 @@
 	em, i {
 		font-style: italic;
 	}
-
+/*bookmark*/
 	p {
 		margin: 0 0 2rem 0;
-		color: #666666;
+		color: #1d191c;
 		font-size: 1.2rem;
 	}
 
@@ -3084,7 +3084,7 @@
 		.wrapper.style3 {
 			background-color: #000;
 			color: #bfbfbf;
-			background-image: url(../../images/bg.jpg);
+			background-image: url(../../images/banner1.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -3104,7 +3104,7 @@
 			}
 
 			.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
-				color: #ffffff;
+				color: #cb4ec9;
 			}
 
 			.wrapper.style3 blockquote {
@@ -3326,7 +3326,8 @@
 				transition-delay: 1.25s;
 				content: '';
 				display: block;
-				background-color: rgba(0, 0, 0, 0.95);
+				/*bookmark*/
+				background-color: rgba(252, 237, 251, 0.88);
 				height: 100%;
 				left: 0;
 				opacity: 0.75;
@@ -3419,8 +3420,8 @@
 	}
 
 	#header {
-		background: rgba(0, 0, 0, 0.75);
-		color: #a6a6a6;
+		background: rgba(248, 248, 248, 0.86);
+		color: #f8f8f8;
 		cursor: default;
 		height: 3.25em;
 		left: 0;
@@ -3449,14 +3450,14 @@
 
 			#header > .logo a {
 				font-size: 1.25rem;
-				color: #FFF;
+				color: #411339;
 				text-decoration: none;
 			}
 
 			#header > .logo span {
 				font-weight: 300;
-				font-size: .75rem;
-				color: rgba(255, 255, 255, 0.5);
+				font-size: 1rem;
+				color: rgba(147, 49, 114, 0.99);
 			}
 
 		#header > a {
@@ -3719,10 +3720,12 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/banner1.jpg");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		background-color: rgba(248, 248, 248, 0.2);
+
 		border-top: 0;
 		min-height: 100vh;
 		height: 100vh !important;
@@ -3749,17 +3752,17 @@
 		#banner h1 {
 			font-size: 4rem;
 			margin-bottom: 1rem;
-			color: #FFF;
+			color: #872c6c;
 		}
 
 		#banner p {
-			color: rgba(255, 255, 255, 0.65);
+			color: rgb(168, 66, 160);
 			font-size: 1.5rem;
 			margin-bottom: 3rem;
 		}
 
 		#banner a {
-			color: #FFF;
+			color: #c24a9e;
 			text-decoration: none;
 		}
 
@@ -3789,7 +3792,7 @@
 			transition-delay: 1.25s;
 			content: '';
 			display: block;
-			background-color: rgba(0, 0, 0, 0.75);
+			background-color: rgba(248, 248, 248, 0.2);
 			height: 100%;
 			left: 0;
 			opacity: 0.45;
